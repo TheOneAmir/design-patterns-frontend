@@ -18,6 +18,20 @@
   color: white;
 }
 
+.nested-tabs{
+  padding-top:5px;
+}
+
+.Inner-tabs{
+  padding-left:0px;
+  padding-right:0px;
+}
+
+.Tabdiv{
+  padding-left: 5%;
+  width: 90%;
+}
+
 .App-link {
   color: #61dafb;
 }
