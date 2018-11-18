@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
 import AbstractFactoryFragment from './AbstractFactoryFragment';
+import ButtonForImage from './ButtonImage.js';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Panel } from 'react-bootstrap';
 import { Jumbotron, Button } from 'react-bootstrap';
 import { Tabs, Tab, Row, Col } from 'react-bootstrap';
 import './App.css';
+const abstractFactoryClassDiagram = require('./images/AbstractFactoryClass.png');
 
 class Patterns extends Component {
+  constructor(props, context){
+    super(props, context);
+    this.state = {
+      chosenPattern: "abstractFactory"
+    };
+  }
   render() {
     return (
       <div className="App">
@@ -17,14 +25,14 @@ class Patterns extends Component {
             <div>
                 <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                   <Row className="clearfix center nested-tabs">
-                    <Col sm={3}>
+                    <Col sm={2}>
                       <Nav bsStyle="pills" stacked>
                       <NavItem eventKey="ffirst">Abstract Factory Pattern</NavItem>
                       <NavItem eventKey="ssecond">Builder Pattern</NavItem>
                       <NavItem eventKey="tthird">Other</NavItem>
                       </Nav>
                     </Col>
-                    <Col sm={9}>
+                    <Col sm={8}>
                       <Tab.Content animation>
                         <Tab.Pane eventKey="ffirst">
                         <div>
@@ -57,6 +65,9 @@ A class (the same construction process) can delegate to different Builder object
                         Third
                         </Tab.Pane>
                       </Tab.Content>
+                    </Col>
+                    <Col sm={1}>
+                    <ButtonForImage imageSrc={this.state.chosenPattern + "ClassDiagram"}/>
                     </Col>
                   </Row>
                 </Tab.Container>

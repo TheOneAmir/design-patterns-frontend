@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Image, Navbar, Nav, NavItem, NavDropdown, MenuItem, Panel } from 'react-bootstrap';
+const umlClass = require('./images/AbstractFactoryClass.png');
 
 class AbstractFactoryFragment extends Component {
     render() {
@@ -19,7 +20,7 @@ class AbstractFactoryFragment extends Component {
     Use of this pattern makes it possible to interchange concrete implementations without changing the code that uses them, even at runtime. However, employment of this pattern, as with similar design patterns, may result in unnecessary complexity and extra work in the initial writing of code. Additionally, higher levels of separation and abstraction can result in systems that are more difficult to debug and maintain.
             </Panel.Body>
             </Panel>
-            <Image src="images/AbstractFactoryClass.png" rounded />
+            <Image src={umlClass} rounded />
             </div>
         );
     }
