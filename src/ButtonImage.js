@@ -24,7 +24,7 @@ class ButtonForImage extends Component {
     render() {
         return (
         <div>
-            <Button bsStyle="info" bsSize="large" onClick={this.handleShow}>
+            <Button bsStyle="info" bsSize="small" onClick={this.handleShow}>
             UML Class Diagram
             </Button>
     
