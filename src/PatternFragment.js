@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CollapsiblePanel from './CollapsiblePanel'
 import { Button, Image, Navbar, Nav, NavItem, NavDropdown, MenuItem, Panel } from 'react-bootstrap';
 const umlClass = require('./images/AbstractFactoryClass.png');
 
@@ -14,21 +15,15 @@ class PatternFragment extends Component {
     render() {
         return (
             <div>
-            <Panel id="collapsible-panel-example-2">
+            <Panel>
             <Panel.Heading>
-                <Panel.Title toggle componentClass="h3">{this.props.title}</Panel.Title>
+                <Panel.Title componentClass="h3">{this.props.title}</Panel.Title>
             </Panel.Heading>
             <Panel.Body>
-            <Panel id="collapsible-panel-example-2">
-            <Panel.Heading>
-                <Panel.Title toggle componentClass="h3">Overview</Panel.Title>
-            </Panel.Heading>
-            <Panel.Collapse>
-                <Panel.Body>
-                {this.props.description}
-                </Panel.Body>
-            </Panel.Collapse>
-            </Panel>
+                <CollapsiblePanel heading="Overview" body={this.props.description}/>
+                <CollapsiblePanel heading="Description" />
+                <CollapsiblePanel heading="Use Cases" />
+                <CollapsiblePanel heading="References" body={this.props.refs}/>
             </Panel.Body>
             </Panel>
             </div>
